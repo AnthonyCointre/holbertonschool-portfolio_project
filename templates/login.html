@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Therapist</title>
+  <link rel="icon" href="/static/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="/static/styles/login.css">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <main>
+    <section class="login-section">
+      <div class="login-title">
+        <h1 class="tab-title" id="login-title">Login</h1>
+        <h1 class="tab-title" id="signup-title" style="display: none;">Sign Up</h1>
+      </div>
+
+      <div class="tab-buttons">
+        <div class="tab-button" onclick="showTab('login')">Login</div>
+        <div class="tab-button" onclick="showTab('sign-up')">Sign Up</div>
+      </div>
+
+      <section id="login" class="tab active">
+        <form action="/login" method="post">
+          <input type="hidden" name="action" value="login">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          {% if error %}
+          <div class="error-message" style="color: red;">{{ error }}</div>
+          {% endif %}
+          <div class="form-group">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="sign-up" class="tab">
+        <form action="/login" method="post">
+          <input type="hidden" name="action" value="sign-up">
+          <div class="form-group">
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" required>
+          </div>
+          {% if error %}
+          <div class="error-message" style="color: red;">{{ error }}</div>
+          {% endif %}
+          <div class="form-group">
+            <button type="submit">Sign Up</button>
+          </div>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  {% include 'footer.html' %}
+  <script src="/static/scripts/script.js"></script>
+</body>
+
+</html>
