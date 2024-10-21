@@ -45,19 +45,15 @@ def login():
                 return redirect(url_for('home'))
             else:
                 return render_template('login.html', error='Invalid username or password.')
-
         elif action == 'sign-up':
             if username in users['users']:
                 return render_template('login.html', error='Username already exists.')
-
             hashed_password = bcrypt.hashpw(
                 password.encode('utf-8'), bcrypt.gensalt())
-
             users['users'][username] = hashed_password.decode('utf-8')
             save_users(users)
             session['username'] = username
             return redirect(url_for('home'))
-
     return render_template('login.html')
 
 
