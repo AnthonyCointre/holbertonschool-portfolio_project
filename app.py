@@ -33,36 +33,29 @@ def contact():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    users = load_users()  # Charger les utilisateurs existants
+    users = load_users()
     if request.method == 'POST':
-        # Vérifier l'action (login ou sign-up)
         action = request.form.get('action')
         username = request.form['username']
         password = request.form['password']
 
-        if action == 'login':  # Action de connexion
+        if action == 'login':
             if username in users['users'] and bcrypt.checkpw(password.encode('utf-8'), users['users'][username].encode('utf-8')):
-                # Stocker l'utilisateur dans la session
                 session['username'] = username
-                # Rediriger vers la page d'accueil
                 return redirect(url_for('home'))
             else:
                 return render_template('login.html', error='Invalid username or password.')
 
-        elif action == 'sign-up':  # Action d'inscription
+        elif action == 'sign-up':
             if username in users['users']:
                 return render_template('login.html', error='Username already exists.')
 
-            # Hacher le mot de passe et enregistrer le nouvel utilisateur
             hashed_password = bcrypt.hashpw(
                 password.encode('utf-8'), bcrypt.gensalt())
-            users['users'][username] = hashed_password.decode('utf-8')
-            save_users(users)  # Sauvegarder les nouveaux utilisateurs
 
-            # Connexion automatique de l'utilisateur après l'inscription
-            # Stocker l'utilisateur dans la session
+            users['users'][username] = hashed_password.decode('utf-8')
+            save_users(users)
             session['username'] = username
-            # Rediriger vers la page d'accueil
             return redirect(url_for('home'))
 
     return render_template('login.html')
