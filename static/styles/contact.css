@@ -45,6 +45,10 @@ main {
   padding: 20px;
 }
 
+gmp-map {
+  height: 300px;
+}
+
 h1,
 h2 {
   color: rgb(0, 0, 0);
