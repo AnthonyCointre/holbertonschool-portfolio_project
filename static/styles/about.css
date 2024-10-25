@@ -47,6 +47,7 @@ main {
 
 .questions {
   font-weight: bold;
+  color: rgb(0, 0, 0);
 }
 
 .answers {
@@ -77,8 +78,4 @@ h2 {
   padding: 0px;
   margin: 0px;
   font-size: x-large;
-}
-
-strong {
-  color: rgb(0, 0, 0);
 }
