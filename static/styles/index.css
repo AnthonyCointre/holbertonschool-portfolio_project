@@ -91,7 +91,7 @@ main {
   align-items: center;
 }
 
-.testimonial {
+.testimonial-item {
   background-color: rgb(255, 255, 255);
   padding: 20px;
   margin: 10px;
@@ -101,19 +101,18 @@ main {
   text-align: left;
 }
 
-.testimonial p {
+.testimonial-item p {
   font-style: italic;
   font-size: 1rem;
   color: #333;
 }
 
-.testimonial span {
+.testimonial-item span {
   display: block;
   margin-top: 10px;
   font-weight: bold;
   color: #666;
 }
-
 
 h2 {
   margin: 50px 0 20px;
