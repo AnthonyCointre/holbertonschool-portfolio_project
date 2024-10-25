@@ -30,6 +30,7 @@ main {
 
 .about-me,
 .my-approach,
+.faq,
 .why-choose-me {
   text-align: justify;
   background-color: rgb(255, 255, 255);
@@ -39,8 +40,18 @@ main {
   margin: 0;
 }
 
-.my-approach {
+.my-approach,
+.faq {
   margin: 20px 0;
+}
+
+.questions {
+  font-weight: bold;
+}
+
+.answers {
+  margin: 0 0 10px;
+  display: inline-block;
 }
 
 .closing {
