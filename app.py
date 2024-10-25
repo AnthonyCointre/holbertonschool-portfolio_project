@@ -1,19 +1,27 @@
-import json
+import sqlite3
 import bcrypt
 from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = 'therapist'
 
 
-def load_users():
-    with open('data/users.json', 'r') as f:
-        return json.load(f)
+def get_user(username):
+    conn = sqlite3.connect('data/users.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
+    user = cursor.fetchone()
+    conn.close()
+    return user
 
 
-def save_users(users):
-    with open('data/users.json', 'w') as f:
-        json.dump(users, f, indent=2)
+def save_user(username, hashed_password):
+    conn = sqlite3.connect('data/users.db')
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)",
+                   (username, hashed_password))
+    conn.commit()
+    conn.close()
 
 
 @app.route('/')
@@ -33,27 +41,28 @@ def contact():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    users = load_users()
     if request.method == 'POST':
         action = request.form.get('action')
         username = request.form['username']
         password = request.form['password']
 
         if action == 'login':
-            if username in users['users'] and bcrypt.checkpw(password.encode('utf-8'), users['users'][username].encode('utf-8')):
+            user = get_user(username)
+            if user and bcrypt.checkpw(password.encode('utf-8'), user[1].encode('utf-8')):
                 session['username'] = username
                 return redirect(url_for('home'))
             else:
                 return render_template('login.html', error='Invalid username or password.')
+
         elif action == 'sign-up':
-            if username in users['users']:
+            if get_user(username):
                 return render_template('login.html', error='Username already exists.')
-            hashed_password = bcrypt.hashpw(
-                password.encode('utf-8'), bcrypt.gensalt())
-            users['users'][username] = hashed_password.decode('utf-8')
-            save_users(users)
+            hashed_password = bcrypt.hashpw(password.encode(
+                'utf-8'), bcrypt.gensalt()).decode('utf-8')
+            save_user(username, hashed_password)
             session['username'] = username
             return redirect(url_for('home'))
+
     return render_template('login.html')
 
 
