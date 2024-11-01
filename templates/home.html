@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapist</title>
+  <link rel="icon" href="/static/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="/static/styles/home.css">
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <main>
+    <section class="home-section">
+      <div class="hero-content">
+        <h1>Welcome to your path to wellbeing</h1>
+        <p>Offering professional therapy services to help you find balance and peace.</p>
+        <a href="/contact" class="cta-button">Get in touch</a>
+      </div>
+
+      <h2>Our services</h2>
+      <div class="services-list">
+        <div class="service-item">
+          <h3>Emotional detachment therapy</h3>
+          <p>Specialized sessions to help you release emotional attachments and regain clarity and balance.</p>
+        </div>
+        <div class="service-item">
+          <h3>Negative emotion management</h3>
+          <p>Guidance and techniques to identify, manage, and transform negative emotions for a more peaceful life.
+          </p>
+        </div>
+        <div class="service-item">
+          <h3>Trauma and wound healing</h3>
+          <p>Hypnotherapy and neurotherapy sessions aimed at healing deep emotional traumas and wounds.</p>
+        </div>
+      </div>
+
+      <h2>Some testimonies</h2>
+      <div class="testimonials-list">
+        <div class="testimonial-item">
+          <p>"The emotional detachment therapy helped me let go of past relationships that were holding me back. I feel
+            lighter and more at peace with myself."</p>
+          <span>- Sarah A.</span>
+        </div>
+        <div class="testimonial-item">
+          <p>"Through the sessions on managing negative emotions, I've learned to channel my frustrations and anxieties
+            in healthier ways. It's been a transformative experience."</p>
+          <span>- Mark B.</span>
+        </div>
+        <div class="testimonial-item">
+          <p>"After years of struggling with unresolved trauma, the trauma healing therapy has been life-changing. I
+            finally feel like I'm healing from my past wounds."</p>
+          <span>- Emily C.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include 'footer.html' %}
+  <script src="/static/scripts/script.js"></script>
+</body>
+
+</html>

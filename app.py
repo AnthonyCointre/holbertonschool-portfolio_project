@@ -25,8 +25,13 @@ def save_user(username, hashed_password):
 
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
+
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 
 @app.route('/about')
