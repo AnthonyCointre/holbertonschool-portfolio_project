@@ -82,6 +82,7 @@ main {
 }
 
 .feature {
+  max-width: 400px;
   margin: 1em 0;
 }
 
