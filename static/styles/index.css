@@ -76,15 +76,24 @@ main {
   margin-top: 2em;
 }
 
+.features {
+  display: flex;
+}
+
 .feature {
   margin: 1em 0;
 }
 
-.feature img {
+.features img {
   width: 100%;
   max-width: 300px;
   height: auto;
   border-radius: 10px;
+}
+
+.features p {
+  text-align: justify;
+  padding: 0 20px;
 }
 
 #about {
@@ -100,4 +109,24 @@ main {
 .team ul li {
   display: inline;
   margin: 0 0.5em;
+}
+
+#linkedin,
+#github,
+#twitter-x {
+  max-width: 50px;
+}
+
+#github-repo {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  background-color: #008cba;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#github-repo:hover {
+  background-color: #005f75;
 }
