@@ -1,4 +1,4 @@
-![logo.png](./logo.png)
+![logo.png](https://raw.githubusercontent.com/AnthonyCointre/web-application-for-therapist/refs/heads/main/static/images/logo.png)
 
 # Web application for therapist
 
