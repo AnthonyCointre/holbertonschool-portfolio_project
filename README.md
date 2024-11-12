@@ -1,6 +1,6 @@
-<div style="display: flex; align-items: center;">
-    <div style="flex: 1;">
-        <h1 style="text-align: center;">Web application for therapist</h1>
+<div display="flex" align-items="center">
+    <div flex="1">
+        <h1 text-align="center">Web application for therapist</h1>
     </div>
     <div>
         <img width="200" height="200" src="./static/images/logo.png" alt="Logo">
