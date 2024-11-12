@@ -1,3 +1,5 @@
+![logo.png](./logo.png)
+
 # Web application for therapist
 
 A web application for a neurotherapist and hypnotherapist specialised in emotional detachment, the management of negative emotions, and the healing of traumas and wounds.
