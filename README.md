@@ -1,4 +1,4 @@
-<img width="250" height="250" src="./static/images/logo.png" alt="Logo">
+<img width="200" height="200" src="./static/images/logo.png" alt="Logo">
 
 # Web application for therapist
 
