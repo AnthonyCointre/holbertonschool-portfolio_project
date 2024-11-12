@@ -1,5 +1,5 @@
-<div style="display: flex; align-items: center;">
-  <img width="200" height="200" src="./static/images/logo.png" style="margin-right: 20px;">
+<div display="flex" align-items="center">
+  <img width="200" height="200" src="./static/images/logo.png" margin-right="20px">
   <p>Titre</p>
 </div>
 
