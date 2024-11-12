@@ -1,6 +1,4 @@
-<p align="right">
-    <img width="250" height="250" src="./static/images/logo.png" alt="Logo">
-</p>
+<img width="250" height="250" src="./static/images/logo.png" alt="Logo">
 
 # Web application for therapist
 
