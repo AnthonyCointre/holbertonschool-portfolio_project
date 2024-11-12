@@ -1,7 +1,8 @@
 <p align="center">
     <img width="250" height="250" src="./static/images/logo.png" alt="Logo">
-    <h1 align="center">Web application for therapist</h1>
 </p>
+
+<h1 align="center">Web application for therapist</h1>
 
 A web application for a neurotherapist and hypnotherapist specialised in emotional detachment, the management of negative emotions, and the healing of traumas and wounds.
 
