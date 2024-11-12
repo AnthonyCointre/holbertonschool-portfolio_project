@@ -2,6 +2,9 @@
 
 A web application for a neurotherapist and hypnotherapist specialised in emotional detachment, the management of negative emotions, and the healing of traumas and wounds.
 
+## Landing page
+<img src="./static/images/landing-page.png">
+
 ## Technologies
 
 ### Libraries:
