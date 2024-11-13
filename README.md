@@ -6,10 +6,8 @@ A web application for a neurotherapist and hypnotherapist specialised in emotion
 
 The web application isn't deployed.
 
-For a deep dive into the project, you can read the final project blog article here: [https://www.linkedin.com/in/anthony-cointre/].
 
-
-### Author(s)
+### Author
 
 - [Anthony COINTRE - https://www.linkedin.com/in/anthony-cointre/]
 
@@ -31,7 +29,6 @@ To run this project locally, follow these steps:
 
 3. Install dependencies:
    ```
-
    pip3 install -r requirements.txt
    ```
 
@@ -66,9 +63,7 @@ We welcome contributions to enhance Web application for therapist! Here’s how 
 
 4. Submit a pull request, and we’ll review it as soon as possible.
 
-## Related Projects
-/
-
 ## Licensing
+
 This project is licensed under the MIT License.
 You’re free to use, modify, and distribute this project as long as you provide proper attribution to the original authors.
